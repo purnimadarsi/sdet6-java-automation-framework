@@ -22,10 +22,12 @@ public final class ConfigurationManager {
 
   private static void getSystemVariables()
     {
-      if (Objects.nonNull(System.getProperty("ENVIRONMENT"))) {
+      if (Objects.nonNull(System.getProperty("env"))) {
         ENVIRONMENT = System.getProperty("ENVIRONMENT");
+
         System.out.println("ENVIRONMENT value: " + ENVIRONMENT + " is set from Environment Variables.");
       } else {
+        String str = "hello";
         ENVIRONMENT = FRAMEWORK_PROPERTIES.getProperty("ENVIRONMENT");
         System.out.println("ENVIRONMENT value : " + ENVIRONMENT + "is set from framework-config.properties.");
       }
