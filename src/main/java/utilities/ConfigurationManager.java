@@ -27,7 +27,7 @@ public final class ConfigurationManager {
 
         System.out.println("ENVIRONMENT value: " + ENVIRONMENT + " is set from Environment Variables.");
       } else {
-        String str = "hello";
+        String str = "helloworld";
         ENVIRONMENT = FRAMEWORK_PROPERTIES.getProperty("ENVIRONMENT");
         System.out.println("ENVIRONMENT value : " + ENVIRONMENT + "is set from framework-config.properties.");
       }
